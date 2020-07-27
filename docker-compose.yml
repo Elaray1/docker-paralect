@@ -10,7 +10,7 @@ services:
     command: node index.js
   db:
     image: mongo:4.2
-    container_name: mongo
+    container_name: mongo-ev
     volumes:     
       - dbdata:/data/db
     networks:

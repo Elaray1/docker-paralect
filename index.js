@@ -2,6 +2,7 @@ const Koa = require('koa');
 const Router = require('@koa/router');
 const bodyParser = require('koa-bodyparser');
 const userService = require('./user.service');
+const logsService = require('./logs.service');
 
 const app = new Koa();
 const router = new Router();
@@ -18,11 +19,17 @@ router.get('/me', async (ctx) => {
   ctx.body = results;
 });
 
-router.post('/logs', async (ctx, next) => {
+router.post('/logs', async (ctx) => {
+  const data  = ctx.request.body;
+  const result = await writerService.create({
+    ...data
   });
+  ctx.body = result;
+});
 
-router.get('/logs', async (ctx, next) => {
-
+router.get('/logs', async (ctx) => {
+  const { results } = await userService.find();
+  ctx.body = results;
 });
 
 app.use(router.routes());
