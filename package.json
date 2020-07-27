@@ -1,0 +1,28 @@
+{
+  "name": "docker-paralect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elaray1/docker-paralect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elaray1/docker-paralect/issues"
+  },
+  "homepage": "https://github.com/Elaray1/docker-paralect#readme",
+  "dependencies": {
+    "@koa/router": "^9.3.1",
+    "@paralect/node-mongo": "^2.0.0-beta.5",
+    "joi": "^17.1.1",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.1.0"
+  }
+}
