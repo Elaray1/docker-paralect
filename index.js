@@ -15,7 +15,7 @@ app.use(async (ctx, next) => {
 });
 
 router.get('/me', async (ctx) => {
-  const { results } = await userService.findOne();
+  const { results } = await userService.find();
   ctx.body = results;
 });
 
