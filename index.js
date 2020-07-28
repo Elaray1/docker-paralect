@@ -21,14 +21,14 @@ router.get('/me', async (ctx) => {
 
 router.post('/logs', async (ctx) => {
   const data  = ctx.request.body;
-  const result = await writerService.create({
+  const result = await logsService.create({
     ...data
   });
   ctx.body = result;
 });
 
 router.get('/logs', async (ctx) => {
-  const { results } = await userService.find();
+  const { results } = await logsService.find();
   ctx.body = results;
 });
 
